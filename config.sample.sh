@@ -775,6 +775,7 @@ export JD_UNSUB_PLOG="true"
 export JOYPARK_JOY_START="120"     # 只做前几个CK
 export JOY_COIN_MAXIMIZE="1"       # 最大化硬币收益，如果合成后全部挖土后还有空位，则开启此模式（默认关闭） 0关闭 1开启
 
+
 # ddo
 export JD_CITY_HELPPOOL="true"
 # shufflewzc
