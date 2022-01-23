@@ -9,5 +9,5 @@ curl -L https://cdn.jsdelivr.net/gh/shuai2051/MRI@main/code.sh -o /ql/sample/cod
 ###4.自动更新extra.sh模板
 curl -L https://cdn.jsdelivr.net/gh/shuai2051/MRI@main/extra.sh -o /ql/sample/extra.s.sh && cp -rf /ql/sample/extra.s.sh /ql/config
 ###4.自动更新extra2.sh模板
-curl -L https://cdn.jsdelivr.net/gh/shuai2051/MRI@main/extra.sh -o /ql/sample/extra.s.sh && cp -rf /ql/sample/extra2.s.sh /ql/config
+curl -L https://cdn.jsdelivr.net/gh/shuai2051/MRI@main/extra2.sh -o /ql/sample/extra2.s.sh && cp -rf /ql/sample/extra2.s.sh /ql/config
 ###复制完毕
