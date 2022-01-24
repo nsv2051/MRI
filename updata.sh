@@ -18,7 +18,6 @@ curl -L https://cdn.jsdelivr.net/gh/shuai2051/MRI@main/extra.sh -o /ql/sample/ex
 cp -rf /ql/sample/extra.s.sh /ql/config
 echo "5.自动下载extra2.sh文件"
 curl -L https://cdn.jsdelivr.net/gh/shuai2051/MRI@main/extra2.sh -o /ql/scripts/extra2.s.sh
-cp -rf /ql/scripts/extra2.s.sh /ql/scripts
 echo "6.自动下载ckck2.sh文件"
 curl -L https://cdn.jsdelivr.net/gh/shuai2051/MRI@main/ckck2.sh -o /ql/scripts/ckck2.sh
-echo "复制完毕"
+echo "配置完毕"
