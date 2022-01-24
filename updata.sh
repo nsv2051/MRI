@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 <<'COMMENT'
-cron: 16 */2 * * *
+cron: 16 8-20/4 * * *
 new Env('下载配置文件模板到config文件夹');
 COMMENT
 
