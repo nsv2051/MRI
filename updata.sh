@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
-###复制配置文件模板到config文件夹
+<<'COMMENT'
+cron: 16 */2 * * *
+new Env('下载配置文件模板到config文件夹');
+COMMENT
+
 echo "1.自动更新task_before.sh模板"
 curl -L https://cdn.jsdelivr.net/gh/shuai2051/MRI@main/task_before.sh -o /ql/sample/task_before.s.sh && cp -rf /ql/sample/task_before.s.sh /ql/config
 echo "2.自动更新config.sh模板"
