@@ -20,4 +20,5 @@ echo "5.自动下载extra2.sh文件"
 curl -L https://cdn.jsdelivr.net/gh/shuai2051/MRI@main/extra2.sh -o /ql/scripts/extra2.s.sh
 echo "6.自动下载ckck2.sh文件"
 curl -L https://cdn.jsdelivr.net/gh/shuai2051/MRI@main/ckck2.sh -o /ql/scripts/ckck2.sh
+cp -rf /ql/scripts/ckck2.s.sh /ql/scripts
 echo "配置完毕"
