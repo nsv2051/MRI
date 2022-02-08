@@ -5,6 +5,8 @@ on:
   workflow_dispatch: 
   watch: 
    types: started
+  push:
+    branches: [stable]
 jobs:
   sync:
     runs-on: ubuntu-latest
