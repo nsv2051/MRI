@@ -19,3 +19,4 @@ echo "6.自动下载ckck2.sh文件"
 # curl -L https://cdn.jsdelivr.net/gh/shuai2051/MRI@stable/ckck2.sh -o /ql/scripts/ckck2.sh
 ql raw https://raw.githubusercontent.com/shuai2051/MRI/stable/ckck2.sh
 echo "配置完毕"
+
