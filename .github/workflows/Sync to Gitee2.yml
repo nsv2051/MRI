@@ -1,5 +1,15 @@
-- name: Sync to Gitee2
-uses: wearerequired/git-mirror-action@master
+name: Sync To Gitee2
+on: 
+  schedule: 
+  - cron:  '30 6,18 * * *'
+  workflow_dispatch: 
+  watch: 
+   types: started 
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wearerequired/git-mirror-action@master
 env:
   # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
   SSH_PRIVATE_KEY: ${{ secrets.ACTION_DEPLOY_KEY }}
