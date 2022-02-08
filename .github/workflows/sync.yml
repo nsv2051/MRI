@@ -4,7 +4,7 @@ on:
   - cron:  '30 6,18 * * *'
   workflow_dispatch: 
   watch: 
-   types: started,push,delete,create
+   types: started
 jobs:
   sync:
     runs-on: ubuntu-latest
