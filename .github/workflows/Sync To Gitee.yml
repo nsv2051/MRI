@@ -6,7 +6,9 @@ on:
   watch: 
    types: started
   push:
-    branches: [stable]
+    branches: 
+      -stable
+      -test
 jobs:
   sync:
     runs-on: ubuntu-latest
