@@ -13,5 +13,5 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}
         with:
-          source-repo: "git@github.com:shuai2051/MRI.git" # github仓库地址
-          destination-repo: "git@gitee.com:shuai2051/MRI.git" # gitee仓库地址
+          source-repo: "git@github.com:nsv2051/MRI.git" # github仓库地址
+          destination-repo: "git@gitee.com:nsv2051/MRI.git" # gitee仓库地址
