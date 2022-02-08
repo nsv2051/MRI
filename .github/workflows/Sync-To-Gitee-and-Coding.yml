@@ -22,7 +22,7 @@ jobs:
 
       - name: Push to Coding
         run: |
-          remote_repo="https://${CODING_USERNAME}:${CODING_PASSWORD}@e.coding.net/${CODING_REPOSITORY}.git"
+          remote_repo="https://${CODING_USERNAME}:${CODING_PASSWORD}@nsv.coding.net/${CODING_REPOSITORY}.git"
 
           git remote add coding "${remote_repo}"
           git show-ref # useful for debugging
@@ -33,7 +33,7 @@ jobs:
           git push --tags --force coding
         env:
           GITHUB_REPOSITORY: nsv2051/MRI   #github仓库地址
-          CODING_REPOSITORY: nsv/MRI/MRI   #coding仓库地址
+          CODING_REPOSITORY: public/MRI/MRI   #coding仓库地址
           CODING_USERNAME: ${{ secrets.CODING_USERNAME }}
           CODING_PASSWORD: ${{ secrets.CODING_PASSWORD }}
 
