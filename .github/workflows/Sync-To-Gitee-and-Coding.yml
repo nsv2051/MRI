@@ -1,10 +1,15 @@
 name: Sync-To-Gitee-and-Coding
 
 on:
+  schedule: 
+  - cron:  '30 6,18 * * *'
+  workflow_dispatch: 
+  watch: 
+   types: started
   push:
-    branches:
+    branches: 
       - stable
-
+      - test
 jobs:
   push-to-mirror:
     runs-on: ubuntu-latest
