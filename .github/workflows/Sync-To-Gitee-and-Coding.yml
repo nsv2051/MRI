@@ -32,7 +32,7 @@ jobs:
           git push --all --force coding
           git push --tags --force coding
         env:
-          CODING_REPOSITORY: nsv/MRI/MRI
+          CODING_REPOSITORY: nsv/devs/MRI
           CODING_USERNAME: ${{ secrets.CODING_USERNAME }}
           CODING_PASSWORD: ${{ secrets.CODING_PASSWORD }}
 
