@@ -22,7 +22,8 @@ jobs:
 
       - name: Push to Coding
         run: |
-          remote_repo="https://${CODING_USERNAME}:${CODING_PASSWORD}@nsv.coding.net/${CODING_REPOSITORY}.git"
+          # remote_repo="https://${CODING_USERNAME}:${CODING_PASSWORD}@nsv.coding.net/${CODING_REPOSITORY}.git"
+          remote_repo="https://${CODING_USERNAME}:${CODING_PASSWORD}@e.coding.net/nsv/MRI/MRI.git"
 
           git remote add coding "${remote_repo}"
           git show-ref # useful for debugging
