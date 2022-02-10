@@ -22,8 +22,6 @@ jobs:
           for branch in `git branch -a | grep remotes | grep -v HEAD`; do
             git branch --track ${branch##*/} $branch
           done
-        env:
-          GITHUB_REPOSITORY: nsv2051/MRI
 
       - name: Push to Coding
         run: |
@@ -37,22 +35,23 @@ jobs:
           git push --all --force coding
           git push --tags --force coding
         env:
-          CODING_REPOSITORY: nsv/devs/MRI
+          GITHUB_REPOSITORY: ${{ secrets.GIT_REPOSITORY }}
+          CODING_REPOSITORY: ${{ secrets.CODING_REPOSITORY }}
           CODING_USERNAME: ${{ secrets.CODING_USERNAME }}
           CODING_PASSWORD: ${{ secrets.CODING_PASSWORD }}
 
-      - name: Push to Gitee
-        run: |
-          remote_repo="https://${GITEE_USERNAME}:${GITEE_PASSWORD}@gitee.com/${GITEE_REPOSITORY}.git"
+#       - name: Push to Gitee
+#         run: |
+#           remote_repo="https://${GITEE_USERNAME}:${GITEE_PASSWORD}@gitee.com/${GITEE_REPOSITORY}.git"
 
-          git remote add gitee "${remote_repo}"
-          git show-ref # useful for debugging
-          git branch --verbose
+#           git remote add gitee "${remote_repo}"
+#           git show-ref # useful for debugging
+#           git branch --verbose
 
-          # publish all
-          git push --all --force gitee
-          git push --tags --force gitee
-        env:
-          GITEE_REPOSITORY: shenweiyan/GitHub-SYNC
-          GITEE_USERNAME: ${{ secrets.GITEE_USERNAME }}
-          GITEE_PASSWORD: ${{ secrets.GITEE_PASSWORD }}
+#           # publish all
+#           git push --all --force gitee
+#           git push --tags --force gitee
+#         env:
+#           GITEE_REPOSITORY: shenweiyan/GitHub-SYNC
+#           GITEE_USERNAME: ${{ secrets.GITEE_USERNAME }}
+#           GITEE_PASSWORD: ${{ secrets.GITEE_PASSWORD }}
