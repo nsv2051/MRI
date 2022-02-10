@@ -35,10 +35,10 @@ jobs:
           git push --all --force coding
           git push --tags --force coding
         env:
-          GITHUB_REPOSITORY: ${{ secrets.GIT_REPOSITORY }}   # github仓库分支  用户名/仓库名
-          CODING_REPOSITORY: ${{ secrets.CODING_REPOSITORY }}# coding仓库分支  团队名/项目/仓库名
-          CODING_USERNAME: ${{ secrets.CODING_USERNAME }}    # coding账号，'@'符号用'%40'代替
-          CODING_PASSWORD: ${{ secrets.CODING_PASSWORD }}    # coding密码
+          GITHUB_REPOSITORY: ${{ secrets.GIT_REPOSITORY }}    # github仓库分支  用户名/仓库名
+          CODING_REPOSITORY: ${{ secrets.CODING_REPOSITORY }} # coding仓库分支  团队名/项目/仓库名
+          CODING_USERNAME: ${{ secrets.CODING_USERNAME }}     # coding账号，'@'符号用'%40'代替
+          CODING_PASSWORD: ${{ secrets.CODING_PASSWORD }}     # coding密码
 
 #       - name: Push to Gitee
 #         run: |
