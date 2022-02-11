@@ -18,8 +18,8 @@ echo "4.自动更新extra.sh模板"
 wget https://git.shuai2051.workers.dev/https://raw.githubusercontent.com/nsv2051/MRI/stable/extra.sh -O /ql/sample/extra.s.sh && cp -rf /ql/sample/extra.s.sh /ql/config
 echo "5.自动更新extra2.sh模板"
 # curl -L https://cdn.jsdelivr.net/gh/shuai2051/MRI@stable/extra2.sh -o /ql/scripts/extra2.sh
-wget https://git.shuai2051.workers.dev/https://raw.githubusercontent.com/nsv2051/MRI/stable/extra2.sh -O /ql/scripts/extra2.sh
+wget https://git.shuai2051.workers.dev/https://raw.githubusercontent.com/nsv2051/MRI/stable/extra2.sh -O /ql/scripts/extra2.s.sh
 echo "6.自动下载ckck2.sh文件"
 # curl -L https://cdn.jsdelivr.net/gh/shuai2051/MRI@stable/ckck2.sh -o /ql/scripts/ckck2.sh
-wget https://git.shuai2051.workers.dev/https://raw.githubusercontent.com/nsv2051/MRI/stable/ckck2.sh -O /ql/scripts/ckck2.sh
+wget https://git.shuai2051.workers.dev/https://raw.githubusercontent.com/nsv2051/MRI/stable/ckck2.sh -O /ql/scripts/ckck2.s.sh
 echo "配置完毕"
