@@ -5,4 +5,4 @@ Mutual aid Research Institute   稳定版本
   
 ### 访问量
 
-![](http://hhttps://pouncing-hazel-snapdragon.glitch.me/MRI/count.svg)
+![](hhttp://profile-counter.glitch.me/MRI/count.svg)
