@@ -7,8 +7,7 @@ on:
    types: started
   push:
     branches: 
-      - stable
-      - test
+      - main
 jobs:
   sync:
     runs-on: ubuntu-latest
