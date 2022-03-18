@@ -8,8 +8,7 @@ on:
    types: started
   push:
     branches: 
-      - stable
-      - test
+      - main
 jobs:
   push-to-mirror:
     runs-on: ubuntu-latest
