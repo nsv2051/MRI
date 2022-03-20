@@ -1,6 +1,6 @@
 ## Version: v2.8.0
 ## Date: 2021-06-20
-## Mod: Build 20220203-002-test
+## Mod: Build 20220313-001-test
 ## Update Content: 可持续发展纲要\n1. session管理破坏性修改\n2. 配置管理可编辑config下文件\n3. 自定义脚本改为查看脚本\n4. 移除互助相关
 
 ## 上面版本号中，如果第2位数字有变化，那么代表增加了新的参数，如果只有第3位数字有变化，仅代表更新了注释，没有增加新的参数，可更新可不更新
@@ -53,7 +53,7 @@ export BARK_SOUND=""
 ## 下方填写推送消息分组，默认为"QingLong"
 export BARK_GROUP="QingLong"
 
-## 3. Telegram
+## 3. Telegram 
 ## 下方填写自己申请@BotFather的Token，如10xxx4:AAFcqxxxxgER5uw
 export TG_BOT_TOKEN=""
 ## 下方填写 @getuseridbot 中获取到的纯数字ID
@@ -74,7 +74,7 @@ export TG_PROXY_AUTH=""
 ## 如需使用，请赋值代理地址链接，并自行解除下一行的注释
 export TG_API_HOST=""
 
-## 4. 钉钉
+## 4. 钉钉 
 ## 官方文档：https://developers.dingtalk.com/document/app/custom-robot-access
 ## 下方填写token后面的内容，只需 https://oapi.dingtalk.com/robot/send?access_token=XXX 等于=符号后面的XXX即可
 export DD_BOT_TOKEN=""
@@ -117,9 +117,9 @@ export PUSH_PLUS_USER=""
 ## esac
 
 ## 9. go-cqhttp
-## gobot_url 推送到个人QQ: http://127.0.0.1/send_private_msg  群：http://127.0.0.1/send_group_msg
+## gobot_url 推送到个人QQ: http://127.0.0.1/send_private_msg  群：http://127.0.0.1/send_group_msg 
 ## gobot_token 填写在go-cqhttp文件设置的访问密钥
-## gobot_qq 如果GOBOT_URL设置 /send_private_msg 则需要填入 user_id=个人QQ 相反如果是 /send_group_msg 则需要填入 group_id=QQ群
+## gobot_qq 如果GOBOT_URL设置 /send_private_msg 则需要填入 user_id=个人QQ 相反如果是 /send_group_msg 则需要填入 group_id=QQ群 
 ## go-cqhttp相关API https://docs.go-cqhttp.org/api
 export GOBOT_URL=""
 export GOBOT_TOKEN=""
@@ -254,27 +254,27 @@ recombin_ck_envs_num="7"
 ### 释义：可以自由定义多组局部模式环境变量；
 ### 赋值要求：详见“局部模式环境变量”赋值要求。如果多组变量中针对同一个脚本设置了多次模式及参数变量，实现迭代组合，等同于局部模式环境变量的赋值要求 ⑨ ；
 recombin_ck_envs1="jd_fruit|jd_pet|jd_plantBean|jd_dreamFactory|jd_jdfactory|jd_crazy_joy|jd_jdzz|jd_jxnc|jd_bookshop|jd_cash|jd_sgmh|jd_cfd|jd_health|jd_carnivalcity|jd_city|jd_moneyTree_heip@3@5" ## 强制轮换
-recombin_ck_envs2="iroyway*zdjr@4@-@-@0@-@0"                                                                                                                                                          # 组队瓜分京豆。参数1、参数2，使用 - 占位符，表示引用 组队瓜分京豆活动变量组 的前两个参数，作为几人成队和发起几次组队
-recombin_ck_envs3="jd_jxlhb|jd_88hb@4@78@1"                                                                                                                                                           # 领88元红包
-recombin_ck_envs4="CheckCK|checkCookie|cookieCheck|checkCookie|bean_change|wskey&jd_islogin_xh"                                                                                                       # 强制黑名单
-recombin_ck_envs5="ccwav*speed_sign|jd_speed_signfaker@5@0@20@-@1h"                                                                                                                                   # ccwav 防黑号京东极速版任务分段
-recombin_ck_envs6="jd_joy_reward@5@0@10@0"                                                                                                                                                            # 宠汪汪兑换分段并发
+recombin_ck_envs2="iroyway*zdjr@4@-@-@0@-@0"                   # 组队瓜分京豆。参数1、参数2，使用 - 占位符，表示引用 组队瓜分京豆活动变量组 的前两个参数，作为几人成队和发起几次组队
+recombin_ck_envs3="jd_jxlhb|jd_88hb@4@78@1"                    # 领88元红包
+recombin_ck_envs4="CheckCK|checkCookie|cookieCheck|checkCookie|bean_change|wskey&jd_islogin_xh"      # 强制黑名单
+recombin_ck_envs5="ccwav*speed_sign|jd_speed_signfaker@5@0@20@-@1h"      # ccwav 防黑号京东极速版任务分段
+recombin_ck_envs6="jd_joy_reward@5@0@10@0"                               # 宠汪汪兑换分段并发
 recombin_ck_envs7="jd_jfcz@5@0@10@0"
 
 ## 11.2.3 组队瓜分京豆环境变量组
 ### 释义：用于自定义多组 activityId 和 activityUrl；
 ### 赋值要求：详见示例：
 activity_env=(
-  5@3@48a4106275f24bb7871e396fcf39d767@https://lzkjdz-isv.isvjcloud.com # 第 1 组环境变量。前两个参数表示 5 人成队，每个账号最多发起 3 次组队
-  5@2@a64e40b100b44e2d9213712fa3fdcd67@https://cjhydz-isv.isvjcloud.com # 第 2 组环境变量。前两个参数表示 5 人成队，每个账号最多发起 2 次组队
-  5@3@e56a4af7b2e940ec9270f24dd67a20d3@https://lzkjdz-isv.isvjcloud.com # 第 3 组环境变量。前两个参数表示 5 人成队，每个账号最多发起 3 次组队
-  5@3@c68f8d3d24464740a5ed9dbc1e99857f@https://cjhydz-isv.isvjcloud.com # 第 4 组环境变量。前两个参数表示 5 人成队，每个账号最多发起 3 次组队
+  5@3@48a4106275f24bb7871e396fcf39d767@https://lzkjdz-isv.isvjcloud.com        # 第 1 组环境变量。前两个参数表示 5 人成队，每个账号最多发起 3 次组队
+  5@2@a64e40b100b44e2d9213712fa3fdcd67@https://cjhydz-isv.isvjcloud.com        # 第 2 组环境变量。前两个参数表示 5 人成队，每个账号最多发起 2 次组队
+  5@3@e56a4af7b2e940ec9270f24dd67a20d3@https://lzkjdz-isv.isvjcloud.com        # 第 3 组环境变量。前两个参数表示 5 人成队，每个账号最多发起 3 次组队
+  5@3@c68f8d3d24464740a5ed9dbc1e99857f@https://cjhydz-isv.isvjcloud.com        # 第 4 组环境变量。前两个参数表示 5 人成队，每个账号最多发起 3 次组队
   5@3@00d5cde9d98547f4befa225c0e4bb087@https://cjhydz-isv.isvjcloud.com
   5@3@6757db2bea4748ae9168a8e5b4d050c4@https://cjhydz-isv.isvjcloud.com
   5@3@402541a7b196403c8781171a0c27967c@https://lzkjdz-isv.isvjcloud.com
   5@3@776e7e159a2b4b04bd3fc72791b50c17@https://cjhydz-isv.isvjcloud.com
   5@3@8dd125c39ede43b8882ef5b9d82b8e2d@https://lzkjdz-isv.isvjcloud.com
-  teamer_num@team_num@activityId9@activityUrl9 # 第 10 组环境变量。前两个参数表示 teamer_num 人成队，每个账号最多发起 team_num 次组队
+  teamer_num@team_num@activityId9@activityUrl9                                 # 第 10 组环境变量。前两个参数表示 teamer_num 人成队，每个账号最多发起 team_num 次组队
 )
 
 ## 12 自定义小工具 extra2.sh 环境变量
@@ -293,79 +293,124 @@ DOWNLOAD_BASIC_JS=""
 ###                ql|JD_DailyBonus                                      两个脚本均不屏蔽仓库文件夹复制替换
 ###                sendNotify@JDHelloWorld_jd_scripts|ccwav_QLScript2    sendNotify.js 不复制到 /ql/scripts/路径下的 JDHelloWorld 和 ccwav 的仓库文件夹。文件夹名称必须精确完整写出，不支持模糊匹配。
 js_deps_replace_envs="ql|JD_DailyBonus&sendNotify|JS_USER_AGENTS|USER_AGENTS@JDHelloWorld_jd_scripts"
+## 12.4 解析活动口令
+### 赋值要求：例如：单口令，例如 JD_CODE="29:/(M2wIg7AVEn)，10"
+###                 多口令：例如 JD_CODE="'29:/(M2wIg7AVEn)，10' '29:/(M2wIg7AVEn)，10'"
+JD_CODE=""
+## 12.5 调用组队活动的脚本文件名的关键词
+ZDJR_SCR="smiek_jd_zdjr.js"
 
 ## 13 Shell 版 Cookie 检测工具 ckck2 环境变量
 ## 13.1 推送失效账号、有效账号
 ### 赋值要求：填 1 表示只推送失效账号；
-###          填 2 表示推送失效账号、有效账号；
-###          空值或填其他内容表示不启用该功能。
+###           填 2 表示推送失效账号、有效账号；
+###           空值或填其他内容表示不启用该功能。
 NOTIFY_VALID_CK_TYPE=""
 ## 13.2 如果本次检测的失效、有效账号与上次结果一致，则不通知
 ### 赋值要求：填 1 表示如果失效账号未变化，则不通知。空值或填其他内容表示不启用该功能。
 NOTIFY_SKIP_SAME_CONTENT=""
-## 13.3 预测和通知账号剩余有效期的检测和通知类型
+## 13.3 预测和通知账号剩余有效期
+## 13.3.1 预测和通知账号剩余有效期的检测和通知类型
 ### 赋值要求：填 1 表示预测和通知账号剩余有效期；
-###          填 2 表示只预测不通知账号剩余有效期；
-###          空值或填其他内容表示不启用该功能。
+###           填 2 表示只预测不通知账号剩余有效期；
+###           空值或填其他内容表示不启用该功能。
 NOTIFY_VALID_TIME=""
+## 13.3.2 临期通知
+### 自定义账号有效期不足N天时发出一对一通知
+### 赋值要求：正整数数字，（单位：天）;
+###           空值表示不启用该功能。
+NOTIFY_VALID_DAY=""
 ## 13.4 JD_WSCK(wskey)相关
-## 13.4.1 检测到失效账号后是否搜索并运行 WSKEY 转换 Cookie 的脚本(需要 /ql/scripts 或其子路径已存在 wskey 转换脚本)
+## 13.4.1 (失效)检测到失效账号后是否搜索并运行 WSKEY 转换 Cookie 的脚本(需要 /ql/scripts 或其子路径已存在 wskey 转换脚本)
 ### 赋值要求：填 1 表示启用 WSKEY 转换 Cookie 功能。空值或其他值表示不启用该功能。
-WSKEY_TO_CK=""
-## 13.4.2 自定义调用的 wskey 转换脚本
+### WSKEY_TO_CK=""
+## 13.4.2 (失效)自定义调用的 wskey 转换脚本
 ### 赋值要求：例如 wskey_scr="hyzaw_scripts/ql_refreshCK.py"。空值或其他值表示自动搜索文件名中包含 wskey 的 py 文件。
-diy_wskey_scr=""
-## 13.4.3 当未搜索到 wskey 脚本时下载 wskey 转换脚本，下载路径 /ql/scripts/
+### diy_wskey_scr=""
+## 13.4.3 (失效)当未搜索到 wskey 脚本时下载 wskey 转换脚本，下载路径 /ql/scripts/
 ### 赋值要求：填 1 表示启用下载 wskey 转换脚本功能。空值或其他值表示不启用该功能。
-DOWNLOAD_WSKEY_SCR=""
-## 13.4.4 下载 wskey 转换脚本的 URL 链接
+### DOWNLOAD_WSKEY_SCR=""
+## 13.4.4 (失效)下载 wskey 转换脚本的 URL 链接
 ### 赋值要求：空值，则默认下载 ZL143L 的脚本。非必要留空即可。也可自定义其他链接。
-WSKEY_SCR_URL=""
-## 13.4.5 当检索到下载路径 /ql/scripts/ 存在 wskey 转换脚本时，先行检测更新脚本后再进行 wskey 转换
+### WSKEY_SCR_URL=""
+## 13.4.5 (失效)当检索到下载路径 /ql/scripts/ 存在 wskey 转换脚本时，先行检测更新脚本后再进行 wskey 转换
 ### 赋值要求：填 1 表示启用功能。空值或其他值表示不启用该功能。
-CHECK_UPDATE_WSKEY_SCR=""
+### CHECK_UPDATE_WSKEY_SCR=""
 ## 13.4.6 JD_WSCK(wskey) 未录入情况的检测和通知类型
 ### 赋值要求：填 1 表示检测和通知 JD_WSCK(wskey) 未录入情况；
-###          填 2 表示只检测不通知 JD_WSCK(wskey) 未录入情况；
-###          空值或填其他内容表示不启用该功能。
+###           填 2 表示只检测不通知 JD_WSCK(wskey) 未录入情况；
+###           空值或填其他内容表示不启用该功能。
 NOTIFY_WSKEY_NO_EXIST=""
-## 13.5 Zy143L wskey 转换脚本相关
+## 13.4.7 JD_WSCK(wskey) 提前转换 JD_COOKIE
+### 当 JD_COOKIE 剩余有效期不足 N 小时，强制 JD_WSCK(wskey) 转换 JD_COOKIE
+### 赋值要求：正整数数字，（单位：小时）；
+###           空值表示检测到 JD_COOKIE 过期失效后才启动转换。
+WSKEY_UPDATE_VALIDITY_HOUR=""
+### 13.5 是否自动重启生效 Cookie/是否自动禁用失效 Cookie
 ### 13.5.1 是否禁用失效 Cookie
-### 赋值要求：任意赋值表示自动禁用，空值表示不自动禁用
-WSKEY_AUTO_DISABLE=""
-### 13.5.2 按时间间隔更新 Cookie
-### 赋值要求：正整数数字，（单位：小时）
-WSKEY_UPDATE_HOUR=""
-### 13.5.3 自动重试
-### 赋值要求：正整数数字，（单位：次）；
-###          空值表示默认值 10 次。
-WSKEY_TRY_COUNT=""
+### 赋值要求：任意赋值表示不自动禁用，空值表示自动禁用
+export WSKEY_AUTO_DISABLE=""
+### 13.5.2 是否重启生效 Cookie
+### 赋值要求：任意赋值表示不自动重启，空值表示自动重启
+export WSKEY_AUTO_ENABLE=""
 ## 13.6 将 JD_COOKIE 的 pt_pin 值的备注名同步 至 JD_WSCK(wskey) 的同 pin 值的备注名
 ### 赋值要求：填 1 表示同步；
-###          空值或填其他内容表示不启用该功能。
+###           空值或填其他内容表示不启用该功能。
 WSKEY_REMARK_SYNC=""
 ## 13.7 WxPusher相关
 ## 说明：默认在 /ql/scripts/ 生成、更新 CK_WxPusherUid.json 文件，如果账号存在 UID ，可配合 ccwav 的 sendNotify.js 实现一对一推送
 ### 13.7.1 未录入 WxPusher UID 的账号。
 ### 赋值要求：填 1 表示检测并通知未录入 WxPusher UID 的账号；
-###          填 2 表示只预测不通知未录入 WxPusher UID 的账号；
-###          空值或填其他内容表示不启用该功能。
-CK_WxPusherUid=""
+###           填 2 表示只预测不通知未录入 WxPusher UID 的账号；
+###           空值或填其他内容表示不启用该功能。
+CK_WxPusherUid="2"
 ### 13.7.2 自动补全备注中的时间戳和UID
 ## 说明：当 CK_WxPusherUid.json 文件，中存在账号的 UID 且面板环境变量备注中缺少时间戳或 UID 时生效
 ### 赋值要求：填 1 表示补全；
-###          空值或填其他内容表示不启用该功能。
+###           空值或填其他内容表示不启用该功能。
 SCANF_WXPusher_Remarks=""
 ### 13.7.3 WxPusher App Token，用于一对一推送账号失效通知(同 ccwav 一对一通知环境变量，只可保留一个)。
 ### 格式为 AT_xxxx；查看地址：https://wxpusher.zjiecode.com/admin/main/app/appToken
-#WP_APP_TOKEN_ONE=""
+export WP_APP_TOKEN_ONE=""
 ### 13.7.4 WxPusher 主 UID，主 UID 账号可以接收失效的第三者账号及其是否录入JD_WSCK(wskey)的信息。
 ### 格式为 UID_xxxx；查看地址：https://wxpusher.zjiecode.com/admin/main/wxuser/list
 MainWP_UID=""
+### 13.7.5 禁止通知 MainWP_UID 的模式
+### 赋值要求：填 0 表示状态变化及有效期临期均不通知 MainWP_UID；
+###           填 1 表示状态变化通知 MainWP_UID，有效期临期不通知 MainWP_UID；
+###           填 2 表示有效期临期通知 MainWP_UID，状态变化不通知 MainWP_UID；
+###           空值或填其他内容表示状态变化及有效期临期均通知 MainWP_UID。
+NOTIFY_DISABLE_MainWP_UID=""
+### 13.7.6 指定时间段推送失效账号信息
+### 当账号失效后，每天在指定的时间段运行脚本，一次或多次推送 WxPusher 一对一通知；
+### 赋值要求：填 0 至 23 的单个正整数。例如：NOTIFY_WxPusher_TIME="10"；
+###           填 0 至 23 的多个正整数。例如：NOTIFY_WxPusher_TIME="10 15 20"；
+###           填 0 至 23 的数段。例如：NOTIFY_WxPusher_TIME="8~10"或NOTIFY_WxPusher_TIME="8_10"或NOTIFY_WxPusher_TIME="8-10"；
+###           填以上模式的混合内容。例如：NOTIFY_WxPusher_TIME="6 8~10 12-14 16_18"；
+###           空值或填其他内容表示不启用该功能。
+NOTIFY_WxPusher_TIME=""
 ## 13.8 扩展通知
-### 通知内容出现在正文末尾。支持 HTML 语言代码，仅支持 pushplus 、WxPusher 这些 HTML 代码通知的渠道
-### 例如：ExNotify_Content="NoLan服务器：<a href="http://服务器地址:端口?key=HeaderKey">点击访问</a>"
-ExNotify_Content=""
+### 通知内容出现在正文顶部或末尾。支持 HTML 语言代码，仅支持 pushplus 、WxPusher 这些 HTML 代码通知的渠道
+### 例如：ExNotify_Top_Content='<iframe allowtransparency="true" frameborder="0" width="100%" height="auto" scrolling="yes" src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=1&t=0&v=0&d=5&bd=0&k=&f=&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=100%&h=auto&align=center"></iframe>'
+###       ExNotify_Bot_Content='NoLan服务器：<a href="http://服务器地址:端口?key=HeaderKey">点击访问</a>'
+ExNotify_Top_Content=''
+ExNotify_Bot_Content='<iframe allowtransparency="true" frameborder="0" width="100%" height="auto" scrolling="yes" src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=1&t=0&v=0&d=5&bd=0&k=&f=&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=100%&h=auto&align=center"></iframe>'
+
+## 14 Shell 版公告 notify2 环境变量(WxPusher、企业微信应用、pushplus、hxtrip pushplus)
+## 14.1 读取 WxPusher UID 的方式
+### 赋值要求：填 1 表示读取青龙面板环境变量中未被禁用的 JD_COOKIE 备注中的 UID；
+###          填 2 表示读取 /ql/scripts/CK_WxPusherUid.json。必须是 ckck2 生成的带有 status 键值的版本。
+WxPusher_UID_src=''
+## 14.2 过滤已被禁用的环境变量
+### 赋值要求：填 true 表示不发送给已被禁用的环境变量；
+###          填 false 表示发送给所有环境变量。
+Filter_Disabled_Variable="true"
+## 14.3 推送通知的标题
+NOTICE_TITLE=''
+## 14.4 推送通知的摘要内容
+NOTICE_SUMMARY=''
+## 14.5 推送通知的正文内容。支持 HTML 语言代码
+NOTICE_CONTENT=''
 
 ## 其他需要的变量，脚本中需要的变量使用 export 变量名= 声明即可
 
@@ -438,7 +483,7 @@ export FRUIT_BEAN_CARD="true"
 ## 12、是否取关商品。环境变量内容的意思依次是是否取关全部商品(0表示一个都不),是否取关全部店铺数(0表示一个都不),遇到此商品不再进行取关,遇到此店铺不再进行取关
 export UN_SUBSCRIBES="300,300,,"
 ## 12、jd_unsubscribe这个任务是用来取关每天做任务关注的商品和店铺，默认在每次运行时取关20个商品和20个店铺
-### 如果取关数量不够，可以根据情况增加，还可以设置 jdUnsubscribeStopGoods 和 jdUnsubscribeStopShop
+### 如果取关数量不够，可以根据情况增加，还可以设置 jdUnsubscribeStopGoods 和 jdUnsubscribeStopShop 
 ### 商品取关数量
 export goodPageSize="30"
 ### 店铺取关数量
@@ -482,12 +527,12 @@ export cash_zlzh="$(echo $JD_COOKIE | perl -pe "{s|&| |g; s|\S*pt_pin=([^; ]+)(?
 ## 4、京喜工厂开团助力 for Python
 ### 支持指定账号开团，跑1次脚本默认开3次团，如未指定账号默认给账号一开团。
 ### 变量ENV 指定开团账号。可填用户名 或 pt_pin 的值。示例：export jxgc_kaituan="用户1&用户2"
-export jxgc_kaituan="$(echo $JD_COOKIE | perl -pe "{s|&| |g; s|\S*pt_pin=([^; ]+)(?=;?)\S*|\1|g; s| |&|g;}" | awk 'BEGIN{for(i=0;i<10;i++)hex[i]=i;hex["A"]=hex["a"]=10;hex["B"]=hex["b"]=11;hex["C"]=hex["c"]=12;hex["D"]=hex["d"]=13;hex["E"]=hex["e"]=14;hex["F"]=hex["f"]=15;}{gsub(/\+/," ");i=$0;while(match(i,/%../)){;if(RSTART>1);printf"%s",substr(i,1,RSTART-1);printf"%c",hex[substr(i,RSTART+1,1)]*16+hex[substr(i,RSTART+2,1)];i=substr(i,RSTART+RLENGTH);}print i;}')" ## 支持中文用户名
+export jxgc_kaituan="$(echo $JD_COOKIE | perl -pe "{s|&| |g; s|\S*pt_pin=([^; ]+)(?=;?)\S*|\1|g; s| |&|g;}" | awk 'BEGIN{for(i=0;i<10;i++)hex[i]=i;hex["A"]=hex["a"]=10;hex["B"]=hex["b"]=11;hex["C"]=hex["c"]=12;hex["D"]=hex["d"]=13;hex["E"]=hex["e"]=14;hex["F"]=hex["f"]=15;}{gsub(/\+/," ");i=$0;while(match(i,/%../)){;if(RSTART>1);printf"%s",substr(i,1,RSTART-1);printf"%c",hex[substr(i,RSTART+1,1)]*16+hex[substr(i,RSTART+2,1)];i=substr(i,RSTART+RLENGTH);}print i;}')"  ## 支持中文用户名
 ## 5、城城分现金内部助力
 ### 指定助力账号，默认按ck顺序助力
-export ccfxj_isOrder="true"
+export ccfxj_isOrder="true" 
 ### 助力账号pin名称
-export ccfxj_help="$(echo $JD_COOKIE | perl -pe "{s|&| |g; s|\S*pt_pin=([^; ]+)(?=;?)\S*|\1|g; s| |&|g;}" | awk 'BEGIN{for(i=0;i<10;i++)hex[i]=i;hex["A"]=hex["a"]=10;hex["B"]=hex["b"]=11;hex["C"]=hex["c"]=12;hex["D"]=hex["d"]=13;hex["E"]=hex["e"]=14;hex["F"]=hex["f"]=15;}{gsub(/\+/," ");i=$0;while(match(i,/%../)){;if(RSTART>1);printf"%s",substr(i,1,RSTART-1);printf"%c",hex[substr(i,RSTART+1,1)]*16+hex[substr(i,RSTART+2,1)];i=substr(i,RSTART+RLENGTH);}print i;}')" ## 支持中文用户名
+export ccfxj_help="$(echo $JD_COOKIE | perl -pe "{s|&| |g; s|\S*pt_pin=([^; ]+)(?=;?)\S*|\1|g; s| |&|g;}" | awk 'BEGIN{for(i=0;i<10;i++)hex[i]=i;hex["A"]=hex["a"]=10;hex["B"]=hex["b"]=11;hex["C"]=hex["c"]=12;hex["D"]=hex["d"]=13;hex["E"]=hex["e"]=14;hex["F"]=hex["f"]=15;}{gsub(/\+/," ");i=$0;while(match(i,/%../)){;if(RSTART>1);printf"%s",substr(i,1,RSTART-1);printf"%c",hex[substr(i,RSTART+1,1)]*16+hex[substr(i,RSTART+2,1)];i=substr(i,RSTART+RLENGTH);}print i;}')"  ## 支持中文用户名
 ## 6、入会开卡
 ### int，入会送豆满足此值，否则不入会
 export openCardBean="30"
@@ -531,7 +576,7 @@ export JDJR_validator_Count="25"
 ### 新增热气球接客 默认每次运行执行10次
 export gua_wealth_island_serviceNum="500"
 ## 4、修复点点券
-### 新增显示有多少个非法请求 可以开通知
+### 新增显示有多少个非法请求 可以开通知 
 export DDQ_NOTIFY_CONTROL="" ##不填或false为通知，true为不通知
 ## 5、24 及之后的开卡变量
 export guaopencard_All="true"
@@ -543,11 +588,14 @@ export guaunknownTask_card_All="true"
 export gua_carnivalcity_draw="true"
 export guaopenwait_All="true"
 export guaopencard_draw45="3"
-for ((s = 0; s <= 200; s++)); do
-  export guaopencard$s="3"
-  export guaopencard_draw$s="3"
-  export guaopencard_addSku$s="true"
+export guaopencard_compositeCard="true"
+for ((s=0; s<=200; s++)); do
+    export guaopencard$s="3"
+    export guaopencard_draw$s="3"
+    export guaopencard_addSku$s="true"
 done
+## 5.1、京豆奖励判断 | 1=邀请 2=开卡 3=关注  | 填1,2,3
+export guaopencard_rewardBean="1,2,3"
 ## 6、开卡新增变量（69之后适配)
 # 京豆奖励判断 | 1=邀请 2=开卡 3=关注  | 填1,2,3
 export guaopencard_rewardBean="1,2,3"
@@ -558,7 +606,7 @@ export JD_CITY_HELPSHARE="false" # false 优先内部助力 | true 优先助力�
 # cdle 环境变量
 ## 1、签到领现金兑换
 ### 填写 pt_pin@金额，pt_pin为用户名，可以在 COOKIES 中提取；金额为 2 或 10，例如 LiLei@2 或 HanMeimei@10。多值用 & 连接，例如 LiLei@2&HanMeimei@10
-export exchangeAccounts="$(echo $JD_COOKIE | sed "s/&/\n/g; s/\S*pt_pin=\([^;]\+\);\S*/\1@10/g; s/\n/\&/g;")" ##兑10元现金，比较难兑
+export exchangeAccounts="$(echo $JD_COOKIE | sed "s/&/\n/g; s/\S*pt_pin=\([^;]\+\);\S*/\1@10/g; s/\n/\&/g;")"  ##兑10元现金，比较难兑
 ### export exchangeAccounts="$(echo $JD_COOKIE | sed "s/&/ /g; s/\S*pt_pin=\([^;]\+\);\S*/\1@2/g; s/ /&/g;")"           ##兑2元现金
 ## 2、愤怒的现金
 ### 极速助力，打击黑产盗取现金的犯罪行为。默认向前助力9个账号，若要指定被助力账号，需cashHelpPins环境变量中填入需要助力的pt_pin，有多个请用@符号连接。
@@ -634,24 +682,24 @@ export CleanUsers=""
 ### 例：export BEANCHANGE_PERSENT="10"总共有22个账号,结果会分成3条推送通知，1~10为第一条推送，11~20为第二条推送，剩余的为第三条推送
 export BEANCHANGE_PERSENT="" ##10合1
 ### 2. BEANCHANGE_USERGP2 BEANCHANGE_USERGP3 BEANCHANGE_USERGP4  根据Pt_Pin的值进行分组通知
-### 注意：分组通知会强制禁用BEANCHANGE_PERSENT变量!
+### 注意：分组通知会强制禁用BEANCHANGE_PERSENT变量!	
 ### 分组通知的通知标题为 脚本名+"#"+分组数值
 ### 主要用于搭配通知脚本的分组通知使用.
 ### 3.BEANCHANGE_ALLNOTIFY
 ### 设置推送置顶公告，&表示换行，公告会出现在资产通知中(包括一对一).
-### 	例子 :  export BEANCHANGE_ALLNOTIFY="你好&今天天气不错...&&哥斯拉大战金刚...."
+### 	例子 :  export BEANCHANGE_ALLNOTIFY="你好&今天天气不错...&&哥斯拉大战金刚...."  
 ### 	显示:
-###
+### 	
 ### 	【✨✨✨✨公告✨✨✨✨】
 ### 	 你好
 ### 	 今天天气不错...
-###
-### 	 哥斯拉大战金刚....
-export BEANCHANGE_ALLNOTIFY='京东APP-秒杀-秒秒币 1月17过期,记得换哦.
-因为加了购物车抽奖脚本，所有人早上8点半会自动清理购物车。
+### 	 
+### 	 哥斯拉大战金刚.... 
+export BEANCHANGE_ALLNOTIFY='因为加了购物车抽奖脚本，所有人早上8点半会自动清理购物车。
 活动1：<a href="http://mtw.so/6dtM4K">京东会员权益</a>
 活动2：<a href="https://u.jd.com/YMlLsvu">晚上12点下拉页面签到得20豆</a>
 活动3：<a href="https://u.jd.com/YI7HbhU">连续签到瓜分大奖</a>
+活动4：京东APP->我的->会员店->天天领京豆->幸福小店
 <iframe allowtransparency="true" frameborder="0" width="100%" height="auto" scrolling="yes" src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=1&t=0&v=0&d=2&bd=0&k=&f=&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=100%&h=auto&align=center"></iframe>'
 ### 4. BEANCHANGE_ExJxBeans
 ### 当设定BEANCHANGE_ExJxBeans="true"且时间在17点之后，会自动将临期京豆兑换成喜豆续命.
@@ -663,7 +711,7 @@ export BEANCHANGE_CheckJxBeans="true"
 ### 京东CK检测,不正常的自动禁用，正常的如果是禁用状态则自动启用。
 ### 配合通知脚本CK触发使用，也可以直接task。
 ### 兼容jd_bean_change的BEANCHANGE_USERGP2 BEANCHANGE_USERGP3 BEANCHANGE_USERGP4变量。
-### BEANCHANGE_USERGP2 BEANCHANGE_USERGP3 BEANCHANGE_USERGP4  根据Pt_Pin的值进行分组通知
+### BEANCHANGE_USERGP2 BEANCHANGE_USERGP3 BEANCHANGE_USERGP4  根据Pt_Pin的值进行分组通知        
 ### 分组通知的通知标题为 脚本名+"#"+分组数值
 ### 主要用于搭配通知脚本的分组通知使用.
 ### 2021-11-14增加CHECKCK_ALLNOTIFY设置温馨提示，&表示换行，推送时在内容末尾添加显示
@@ -691,8 +739,8 @@ export TG_USER_ID2=""
 ### 3. NOTIFY_SHOWNAMETYPE 通知显示的账号类型
 ### 例：账号名:ccwav  别名:ccwav的别名  Remark:代码玩家
 #export NOTIFY_SHOWNAMETYPE="1"    ##效果: 账号名称：代码玩家
-export NOTIFY_SHOWNAMETYPE="2" ##效果: 账号名称：ccwav的别名(代码玩家)
-#export NOTIFY_SHOWNAMETYPE="3"    ##不做处理，效果: 账号名称：ccwav
+export NOTIFY_SHOWNAMETYPE="2"     ##效果: 账号名称：ccwav的别名(代码玩家)
+#export NOTIFY_SHOWNAMETYPE="3"    ##不做处理，效果: 账号名称：ccwav   
 #export NOTIFY_SHOWNAMETYPE="4"    ##不做处理，效果: 账号名称：ccwav(代码玩家)
 ### 4. NOTIFY_SKIP_NAMETYPELIST
 ### 单独指定某些脚本不做NOTIFY_SHOWNAMETYPE变量处理。例：export NOTIFY_SKIP_NAMETYPELIST="东东农场&东东工厂"
@@ -730,7 +778,7 @@ export PUSH_PLUS_USER_hxtrip=""
 ### 手动建立CK_WxPusherUid.json,可以参考CKName_cache.json,只是nickName改成Uid，
 ### 每个用户的uid可在管理台查看: https://wxpusher.zjiecode.com/admin/main/wxuser/list
 ### 另外: export WP_APP_ONE_TEXTSHOWREMARK="true"，启用一对一推送标题显示备注信息，默认不启用.
-export WP_APP_TOKEN_ONE=""
+#export WP_APP_TOKEN_ONE=""
 export WP_APP_ONE_TEXTSHOWREMARK=""
 ### CK_WxPusherUid.json 内容(pt_pin 如果是汉字需要填写转码后的!):
 ### [
@@ -750,7 +798,7 @@ export WP_APP_ONE_TEXTSHOWREMARK=""
 ### 控制不显示推送通知的底部信息
 ### 例子 :  export NOTIFY_AUTHOR_BLANK="随便填只要非空即可"
 ## [4] jd_joy_reward_Mod.js 宠汪汪积分兑换有就换版
-export JOY_GET20WHEN16="true" ##控制16点才触发20京豆兑换.
+export JOY_GET20WHEN16="true"  ##控制16点才触发20京豆兑换.
 
 # X1a0He 环境变量
 ## 1、简化版京东日资产变动通知
@@ -795,8 +843,8 @@ export JD_UNSUB_INTERVAL="3000"
 export JD_UNSUB_PLOG="true"
 
 # jiulan 环境变量
-export JOYPARK_JOY_START="120" # 只做前几个CK
-export JOY_COIN_MAXIMIZE="1"   # 最大化硬币收益，如果合成后全部挖土后还有空位，则开启此模式（默认关闭） 0关闭 1开启
+export JOYPARK_JOY_START="120"     # 只做前几个CK
+export JOY_COIN_MAXIMIZE="1"       # 最大化硬币收益，如果合成后全部挖土后还有空位，则开启此模式（默认关闭） 0关闭 1开启
 
 # ddo
 export JD_CITY_HELPPOOL="true"
@@ -804,10 +852,36 @@ export JD_CITY_HELPPOOL="true"
 ## 1、禁用重复脚本
 ### 变量内容为任务关键词，各变量用 & 分隔”。
 ### 例：export RES_SUB="Aaron-lv_sync&smiek2121_scripts& /ql/scripts/jd_zjd.py"有三个变量
-export RES_SUB="ccwav_QLScript2&shufflewzc_faker2&Aaron-lv_sync&smiek2121_scripts"
+export RES_SUB="ccwav_QLScript2&shufflewzc_faker2&Aaron-lv_sync&smiek2121_scripts&chianPLA_xiaoshou&star261_jd_main&gys619"
 ## 2、京东自动评价
 ### true为开启，false为关闭
 export JD_Evaluation="true"
+
+# 小埋
+export XFXD="true"
+export plant_cookie="$JD_COOKIE"
+export ACTIVITY_ID=""
+export WXGAME_ACT_ID=""
+
+## Zy143L wskey 转换脚本相关
+### 1、是否检查 Cookie 有效性
+### 赋值要求：任意赋值表示不检查 Cookie 有效性直接进行 wskey 转换，空值表示 Cookie 失效才进行 wskey 转换
+export WSKEY_DISCHECK=""
+### 2、各个 wskey 转换 Cookie 的间隔时间
+### 赋值要求：正整数数字，（单位：秒）
+###           空值表示默认值 10 秒。
+export WSKEY_SLEEP="0"
+### 3、wskey 转换 Cookie 的周期
+### 赋值要求：正整数数字，（单位：小时）
+###           空值表示默认值 23 小时。
+export WSKEY_UPDATE_HOUR=""
+### 4、自动重试的次数
+### 赋值要求：正整数数字，（单位：次）；
+###           空值表示默认值 1 次。
+export WSKEY_TRY_COUNT=""
+### 4、调试模式
+### 赋值要求：任意赋值开启调试模式，空值表示不启用该功能
+export WSKEY_DEBUG=""
 
 # passerby-b
 ## 1、滴滴橙心果园
