@@ -22,4 +22,6 @@ wget https://git.nsv.workers.dev/https://raw.githubusercontent.com/nsv2051/MRI/m
 echo "6.自动下载ckck2.sh文件"
 # curl -L https://cdn.jsdelivr.net/gh/shuai2051/MRI@main/ckck2.sh -o /ql/scripts/ckck2.sh
 wget https://git.nsv.workers.dev/https://raw.githubusercontent.com/nsv2051/MRI/main/ckck2.sh -o ckck2.log -O /ql/scripts/ckck2.sh
+echo "7.自动下载notify2.sh文件"
+wget https://git.nsv.workers.dev/https://raw.githubusercontent.com/nsv2051/MRI/main/notify2.sh -o notify2.log -O /ql/scripts/notify2.sh
 echo "配置完毕"
